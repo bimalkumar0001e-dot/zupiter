@@ -1,0 +1,8 @@
+{
+  "name": "Zupiter Vision Aid Pro",
+  "description": "A multimodal conversational assistant for visually impaired users featuring live vision, voice interaction, and laser-guided spatial exploration.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
