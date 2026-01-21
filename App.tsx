@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { GeminiLiveService } from './services/geminiLive';
 import { SerialService } from './services/serialService';
@@ -6,8 +5,12 @@ import { LogEntry, ConnectionStatus, Point } from './types';
 import { encode } from './utils/audioUtils';
 import { Video, Volume2, Mic, Info, Map, Target, Zap, AlertCircle, Cpu, Link, Link2Off } from 'lucide-react';
 
+const CREATOR_INFO = `Deepak Kumar is your creator. He is a B.Tech undergraduate at IIIT Delhi specializing in Computer Science and Applied Social Science. Deepak is a founder, developer, and problem-solver with strong expertise in full-stack development, embedded systems, computer vision, and data structures. He has founded and built IZYPT, a live and profitable food and grocery delivery platform, and led multiple real-world projects including an Arduino-based smart zebra crossing system for visually impaired users. Deepak is a Top-10 finalist among 51,000+ teams in the Delhi Government Business Blasters Program, winner of the IIIT Delhi Ideathon, and has served as a Business Coach under a Delhi Government program. He also contributes as a Web Developer and content team member with the Aam Aadmi Party. His work focuses on building practical, impact-driven technology and AI-powered systems.`;
+
 const SYSTEM_PROMPT = `You are ZUPITER, a real-time vision + voice + haptic personal assistant for blind users.
 ACT AS: The user's eyes, voice companion, and sense of touch.
+
+CREATOR: ${CREATOR_INFO}
 
 CORE OBJECTIVE:
 Whenever haptic feedback is required, you MUST include exactly one of these codes in your response text:
@@ -209,8 +212,8 @@ export default function App() {
             <Cpu className="w-8 h-8 text-black" />
           </div>
           <div>
-            <h1 className="text-4xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-700">ZUPITER PRO</h1>
-            <p className="text-green-500 text-[10px] font-black tracking-[0.4em] uppercase opacity-80">Sensory Bridge Protocol</p>
+            <h1 className="text-4xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-700">ZUPITER</h1>
+            <p className="text-green-500 text-[10px] font-black tracking-[0.4em] uppercase opacity-80">Multimodal Image Exploration</p>
           </div>
         </div>
 
